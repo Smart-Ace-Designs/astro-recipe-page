@@ -10,6 +10,14 @@ export default defineConfig({
   trailingSlash: "always",
   vite: {
     plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: [
+        "astro/virtual-modules/transitions-router.js",
+        "astro/virtual-modules/transitions-types.js",
+        "astro/virtual-modules/transitions-events.js",
+        "astro/virtual-modules/transitions-swap-functions.js",
+      ],
+    },
   },
   fonts: [
     {
